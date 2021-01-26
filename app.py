@@ -55,7 +55,7 @@ def pet_details(pet_id):
 
 @app.route('/<int:pet_id>', methods=['POST'])
 def submit_edit_form(pet_id):
-    """handle edit form and update pet info in db and app if needed"""
+    """handle edit form and update pet info in db and app if changes made"""
     pet = Pet.query.get_or_404(pet_id)
     form = EditPetForm()
 
